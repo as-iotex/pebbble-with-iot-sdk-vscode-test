@@ -1,0 +1,14 @@
+{
+    "C_Cpp.default.configurationProvider": "nrf-connect",
+    "nrf-connect.topdir": "/opt/nordic/ncs/v2.0.0/",
+    "nrf-connect.toolchain.path": "${nrf-connect.toolchain:2.0.0}",
+    "nrf-connect.applications": [
+        "${workspaceFolder}/hello_world",
+    ],
+    "nrf-connect.west.env": {
+        "$base": "terminal",
+        "ZEPHYR_TOOLCHAIN_VARIANT": "gnuarmemb",
+        "GNUARMEMB_TOOLCHAIN_PATH": "/opt/nordic/ncs/v2.0.0/toolchain/",
+        "ZEPHYR_BASE": "/opt/nordic/ncs/v2.0.0/zephyr"
+    },
+}

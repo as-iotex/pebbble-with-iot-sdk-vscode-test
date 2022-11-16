@@ -1,0 +1,367 @@
+ The terminal process terminated with exit code: 1. 
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+ *  Executing task: nRF Connect: Build: hello_world/build_thingy91_ns (active) 
+
+Building hello_world
+west build --build-dir /w3bstream-iot-sdk-no-docker/hello_world/build_thingy91_ns /w3bstream-iot-sdk-no-docker/hello_world
+
+[0/25] Performing build step for 'spm_subimage'
+ninja: no work to do.
+[1/23] Performing build step for 'mcuboot_subimage'
+ninja: no work to do.
+[3/23] No install step for 'mcuboot_subimage'
+[4/23] Completed 'mcuboot_subimage'
+[5/23] Linking C executable zephyr/zephyr_pre0.elf
+FAILED: zephyr/zephyr_pre0.elf zephyr/zephyr_pre0.map 
+: && ccache /opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc   zephyr/CMakeFiles/zephyr_pre0.dir/misc/empty_file.c.obj -o zephyr/zephyr_pre0.elf  -fuse-ld=bfd  -Wl,-T  zephyr/linker_zephyr_pre0.cmd  -Wl,-Map=/w3bstream-iot-sdk-no-docker/hello_world/build_thingy91_ns/zephyr/zephyr_pre0.map  -Wl,--whole-archive  app/libapp.a  zephyr/libzephyr.a  zephyr/arch/common/libarch__common.a  zephyr/arch/arch/arm/core/aarch32/libarch__arm__core__aarch32.a  zephyr/arch/arch/arm/core/aarch32/cortex_m/libarch__arm__core__aarch32__cortex_m.a  zephyr/arch/arch/arm/core/aarch32/cortex_m/cmse/libarch__arm__core__aarch32__cortex_m__cmse.a  zephyr/arch/arch/arm/core/aarch32/mpu/libarch__arm__core__aarch32__mpu.a  zephyr/lib/libc/newlib/liblib__libc__newlib.a  zephyr/lib/posix/liblib__posix.a  zephyr/soc/arm/common/cortex_m/libsoc__arm__common__cortex_m.a  zephyr/subsys/random/libsubsys__random.a  zephyr/drivers/clock_control/libdrivers__clock_control.a  zephyr/drivers/console/libdrivers__console.a  zephyr/drivers/gpio/libdrivers__gpio.a  zephyr/drivers/i2c/libdrivers__i2c.a  zephyr/drivers/spi/libdrivers__spi.a  zephyr/drivers/serial/libdrivers__serial.a  zephyr/drivers/entropy/libdrivers__entropy.a  zephyr/drivers/timer/libdrivers__timer.a  zephyr/drivers/pinctrl/libdrivers__pinctrl.a  modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a  modules/nrf/lib/fatal_error/lib..__nrf__lib__fatal_error.a  modules/nrf/lib/modem_antenna/lib..__nrf__lib__modem_antenna.a  modules/nrf/subsys/fw_info/lib..__nrf__subsys__fw_info.a  modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a  /opt/nordic/ncs/v2.0.0/nrfxlib/nrf_modem/lib/cortex-m33/soft-float/libmodem.a  -Wl,--no-whole-archive  zephyr/kernel/libkernel.a  zephyr/CMakeFiles/offsets.dir/./arch/arm/core/offsets/offsets.c.obj  -L"/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/thumb/v8-m.main/nofp"  -L/w3bstream-iot-sdk-no-docker/hello_world/build_thingy91_ns/zephyr  -lgcc  layer/libiotex_psa_layer.a  zephyr/arch/common/libisr_tables.a  -no-pie  -mcpu=cortex-m33  -mthumb  -mabi=aapcs  -mfp16-format=ieee  -Wl,--gc-sections  -Wl,--build-id=none  -Wl,--sort-common=descending  -Wl,--sort-section=alignment  -Wl,-u,_OffsetAbsSyms  -Wl,-u,_ConfigAbsSyms  -nostdlib  -static  -Wl,-X  -Wl,-N  -Wl,--orphan-handling=warn  spm/libspmsecureentries.a  -lm  -Wl,-lc  -L"/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/arm-zephyr-eabi"/lib/thumb/v8-m.main/nofp  -Wl,-lgcc  -lc  -specs=nano.specs && cd /w3bstream-iot-sdk-no-docker/hello_world/build_thingy91_ns/zephyr && /opt/nordic/ncs/toolchains/v2.0.0/Cellar/cmake/3.20.5/bin/cmake -E echo
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_driver_wrappers.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_driver_wrappers.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_client.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_client.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: error: layer/libiotex_psa_layer.a(psa_crypto_slot_management.c.obj): conflicting CPU architectures 17/2
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: failed to merge target specific data of file layer/libiotex_psa_layer.a(psa_crypto_slot_management.c.obj)
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `iotex_psa_drbg_init':
+psa_crypto.c:(.text+0x49c): undefined reference to `iotex_hmac_drbg_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `iotex_psa_drbg_free':
+psa_crypto.c:(.text+0x4c4): undefined reference to `iotex_hmac_drbg_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `iotex_psa_drbg_seed':
+psa_crypto.c:(.text+0x4f4): undefined reference to `iotex_md_info_from_type'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x51c): undefined reference to `iotex_hmac_drbg_seed'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x538): undefined reference to `iotex_entropy_func'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_remove_key_data_from_memory':
+psa_crypto.c:(.text+0x2b60): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_get_rsa_public_exponent':
+psa_crypto.c:(.text+0x2d00): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x2d24): undefined reference to `iotex_rsa_export'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x2d44): undefined reference to `iotex_mpi_cmp_int'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x2d5c): undefined reference to `iotex_mpi_size'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x2da0): undefined reference to `iotex_mpi_write_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x2dec): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_get_key_attributes':
+psa_crypto.c:(.text+0x2f48): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_validate_optional_attributes':
+psa_crypto.c:(.text+0x3820): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x382c): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x3850): undefined reference to `iotex_rsa_export'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x3860): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x3894): undefined reference to `iotex_mpi_read_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x38b8): undefined reference to `iotex_mpi_cmp_mpi'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x38f0): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x38fc): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_mac_verify':
+psa_crypto.c:(.text+0x5118): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_key_derivation_abort':
+psa_crypto.c:(.text+0x898c): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x89c8): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x8a04): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x8a40): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj):psa_crypto.c:(.text+0x8a70): more undefined references to `iotex_platform_zeroize' follow
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_des_set_key_parity':
+psa_crypto.c:(.text+0x99b0): undefined reference to `iotex_des_key_set_parity'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x99cc): undefined reference to `iotex_des_key_set_parity'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x99e8): undefined reference to `iotex_des_key_set_parity'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_generate_derived_ecc_key_weierstrass_helper':
+psa_crypto.c:(.text+0x9a38): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9a44): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9ab4): undefined reference to `iotex_ecp_group_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9ac8): undefined reference to `iotex_ecp_group_load'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9b08): undefined reference to `iotex_mpi_sub_int'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9be0): undefined reference to `iotex_mpi_read_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9c04): undefined reference to `iotex_mpi_lt_mpi_ct'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9c34): undefined reference to `iotex_mpi_add_int'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9c5c): undefined reference to `iotex_mpi_write_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9ce4): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0x9cf0): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_tls12_prf_psk_to_ms_set_key':
+psa_crypto.c:(.text+0xb584): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xb670): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_key_agreement_ecdh':
+psa_crypto.c:(.text+0xbc40): undefined reference to `iotex_ecdh_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xbc9c): undefined reference to `iotex_ecdh_get_params'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xbccc): undefined reference to `iotex_ecdh_get_params'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xbd0c): undefined reference to `iotex_ecdh_calc_secret'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xbd8c): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xbd98): undefined reference to `iotex_ecdh_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xbda4): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xbdc8): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_key_agreement_raw_internal':
+psa_crypto.c:(.text+0xbea0): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_key_agreement_internal':
+psa_crypto.c:(.text+0xbf88): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `iotex_psa_random_init':
+psa_crypto.c:(.text+0xc298): undefined reference to `iotex_entropy_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto.c:(.text+0xc29c): undefined reference to `iotex_entropy_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj): in function `psa_generate_random':
+psa_crypto.c:(.text+0xc408): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto.c.obj):(.rodata+0x0): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_driver_wrappers.c.obj): in function `psa_driver_wrapper_generate_key':
+psa_crypto_driver_wrappers.c:(.text+0x43c): undefined reference to `psa_generate_key_internal'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_driver_wrappers.c.obj): in function `psa_driver_wrapper_aead_verify':
+psa_crypto_driver_wrappers.c:(.text+0x127c): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `psa_aead_setup':
+psa_crypto_aead.c:(.text+0x124): undefined reference to `iotex_ccm_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x13c): undefined reference to `iotex_ccm_setkey'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x1c0): undefined reference to `iotex_gcm_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x1d8): undefined reference to `iotex_gcm_setkey'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x238): undefined reference to `iotex_chachapoly_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x24c): undefined reference to `iotex_chachapoly_setkey'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_encrypt':
+psa_crypto_aead.c:(.text+0x5a0): undefined reference to `iotex_ccm_encrypt_and_tag'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x618): undefined reference to `iotex_gcm_crypt_and_tag'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x68c): undefined reference to `iotex_chachapoly_encrypt_and_tag'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_decrypt':
+psa_crypto_aead.c:(.text+0x890): undefined reference to `iotex_ccm_auth_decrypt'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x90c): undefined reference to `iotex_gcm_auth_decrypt'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x98c): undefined reference to `iotex_chachapoly_auth_decrypt'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_set_nonce':
+psa_crypto_aead.c:(.text+0xb70): undefined reference to `iotex_gcm_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0xbb8): undefined reference to `iotex_ccm_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0xc28): undefined reference to `iotex_chachapoly_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_set_lengths':
+psa_crypto_aead.c:(.text+0xcac): undefined reference to `iotex_ccm_set_lengths'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_update_ad':
+psa_crypto_aead.c:(.text+0xd24): undefined reference to `iotex_gcm_update_ad'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0xd64): undefined reference to `iotex_ccm_update_ad'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0xda4): undefined reference to `iotex_chachapoly_update_aad'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_update':
+psa_crypto_aead.c:(.text+0xe48): undefined reference to `iotex_gcm_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0xeb0): undefined reference to `iotex_ccm_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0xf08): undefined reference to `iotex_chachapoly_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_finish':
+psa_crypto_aead.c:(.text+0xfe8): undefined reference to `iotex_gcm_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x104c): undefined reference to `iotex_ccm_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x109c): undefined reference to `iotex_chachapoly_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_aead.c.obj): in function `iotex_psa_aead_abort':
+psa_crypto_aead.c:(.text+0x115c): undefined reference to `iotex_ccm_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x1170): undefined reference to `iotex_gcm_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_aead.c:(.text+0x1184): undefined reference to `iotex_chachapoly_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): in function `iotex_cipher_info_from_psa':
+psa_crypto_cipher.c:(.text+0x350): undefined reference to `iotex_cipher_info_from_values'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): in function `psa_cipher_setup':
+psa_crypto_cipher.c:(.text+0x3ec): undefined reference to `iotex_cipher_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_cipher.c:(.text+0x444): undefined reference to `iotex_cipher_setup'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_cipher.c:(.text+0x4b4): undefined reference to `iotex_cipher_setkey'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_cipher.c:(.text+0x4d4): undefined reference to `iotex_cipher_setkey'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_cipher.c:(.text+0x51c): undefined reference to `iotex_cipher_set_padding_mode'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_cipher.c:(.text+0x538): undefined reference to `iotex_cipher_set_padding_mode'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): in function `iotex_psa_cipher_set_iv':
+psa_crypto_cipher.c:(.text+0x828): undefined reference to `iotex_cipher_set_iv'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): in function `psa_cipher_update_ecb':
+psa_crypto_cipher.c:(.text+0x978): undefined reference to `iotex_cipher_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_cipher.c:(.text+0x9e8): undefined reference to `iotex_cipher_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): in function `iotex_psa_cipher_update':
+psa_crypto_cipher.c:(.text+0xbcc): undefined reference to `iotex_cipher_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): in function `iotex_psa_cipher_finish':
+psa_crypto_cipher.c:(.text+0xc94): undefined reference to `iotex_cipher_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_cipher.c:(.text+0xd10): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_cipher.c.obj): in function `iotex_psa_cipher_abort':
+psa_crypto_cipher.c:(.text+0xd68): undefined reference to `iotex_cipher_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): in function `iotex_psa_ecp_load_representation':
+psa_crypto_ecp.c:(.text+0x10c): undefined reference to `iotex_ecp_keypair_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x184): undefined reference to `iotex_ecp_group_load'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x1c8): undefined reference to `iotex_ecp_point_read_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x1fc): undefined reference to `iotex_ecp_check_pubkey'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x234): undefined reference to `iotex_ecp_read_key'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x288): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): in function `iotex_psa_ecp_import_key':
+psa_crypto_ecp.c:(.text+0x38c): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): in function `iotex_psa_ecp_export_key':
+psa_crypto_ecp.c:(.text+0x3ec): undefined reference to `iotex_ecp_is_zero'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x430): undefined reference to `iotex_ecp_mul'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x47c): undefined reference to `iotex_ecp_point_write_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x4f4): undefined reference to `iotex_ecp_write_key'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x554): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): in function `iotex_psa_ecp_export_public_key':
+psa_crypto_ecp.c:(.text+0x634): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): in function `iotex_psa_ecp_generate_key':
+psa_crypto_ecp.c:(.text+0x6e0): undefined reference to `iotex_ecp_curve_info_from_grp_id'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x728): undefined reference to `iotex_ecp_keypair_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x740): undefined reference to `iotex_ecp_gen_key'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x75c): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x780): undefined reference to `iotex_ecp_write_key'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x79c): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x7cc): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): in function `iotex_psa_ecdsa_sign_hash':
+psa_crypto_ecp.c:(.text+0x864): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x870): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x95c): undefined reference to `iotex_md_get_type'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0x9b4): undefined reference to `iotex_ecdsa_sign_det_ext'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xa10): undefined reference to `iotex_ecdsa_sign'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xa34): undefined reference to `iotex_mpi_write_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xa60): undefined reference to `iotex_mpi_write_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xa88): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xa94): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xabc): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xb04): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_ecp.c.obj): in function `iotex_psa_ecdsa_verify_hash':
+psa_crypto_ecp.c:(.text+0xb9c): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xba8): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xbdc): undefined reference to `iotex_mpi_read_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xc08): undefined reference to `iotex_mpi_read_binary'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xc28): undefined reference to `iotex_ecp_is_zero'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xc74): undefined reference to `iotex_ecp_mul'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xcb4): undefined reference to `iotex_ecdsa_verify'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xcdc): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xce8): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xcf4): undefined reference to `iotex_ecp_keypair_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_ecp.c:(.text+0xd24): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj): in function `iotex_md_info_from_psa':
+psa_crypto_hash.c:(.text+0x98): undefined reference to `iotex_md5_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x9c): undefined reference to `iotex_ripemd160_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0xa0): undefined reference to `iotex_sha1_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0xa4): undefined reference to `iotex_sha224_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0xa8): undefined reference to `iotex_sha256_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0xac): undefined reference to `iotex_sha384_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0xb0): undefined reference to `iotex_sha512_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj): in function `iotex_psa_hash_abort':
+psa_crypto_hash.c:(.text+0x130): undefined reference to `iotex_md5_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x144): undefined reference to `iotex_ripemd160_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x158): undefined reference to `iotex_sha1_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x16c): undefined reference to `iotex_sha256_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x180): undefined reference to `iotex_sha256_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x194): undefined reference to `iotex_sha512_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x1a8): undefined reference to `iotex_sha512_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj): in function `iotex_psa_hash_setup':
+psa_crypto_hash.c:(.text+0x260): undefined reference to `iotex_md5_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x270): undefined reference to `iotex_md5_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x288): undefined reference to `iotex_ripemd160_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x298): undefined reference to `iotex_ripemd160_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x2b0): undefined reference to `iotex_sha1_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x2c0): undefined reference to `iotex_sha1_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x2d8): undefined reference to `iotex_sha256_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x2ec): undefined reference to `iotex_sha256_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x304): undefined reference to `iotex_sha256_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x318): undefined reference to `iotex_sha256_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x330): undefined reference to `iotex_sha512_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x344): undefined reference to `iotex_sha512_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x35c): undefined reference to `iotex_sha512_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x370): undefined reference to `iotex_sha512_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj): in function `iotex_psa_hash_clone':
+psa_crypto_hash.c:(.text+0x470): undefined reference to `iotex_md5_clone'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x490): undefined reference to `iotex_ripemd160_clone'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x4b0): undefined reference to `iotex_sha1_clone'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x4d0): undefined reference to `iotex_sha256_clone'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x4f0): undefined reference to `iotex_sha256_clone'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x510): undefined reference to `iotex_sha512_clone'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x530): undefined reference to `iotex_sha512_clone'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj): in function `iotex_psa_hash_update':
+psa_crypto_hash.c:(.text+0x5e0): undefined reference to `iotex_md5_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x600): undefined reference to `iotex_ripemd160_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x620): undefined reference to `iotex_sha1_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x640): undefined reference to `iotex_sha256_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x660): undefined reference to `iotex_sha256_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x680): undefined reference to `iotex_sha512_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x6a0): undefined reference to `iotex_sha512_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_hash.c.obj): in function `iotex_psa_hash_finish':
+psa_crypto_hash.c:(.text+0x964): undefined reference to `iotex_md5_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x980): undefined reference to `iotex_ripemd160_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x99c): undefined reference to `iotex_sha1_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x9b8): undefined reference to `iotex_sha256_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x9d4): undefined reference to `iotex_sha256_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0x9f0): undefined reference to `iotex_sha512_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_hash.c:(.text+0xa0c): undefined reference to `iotex_sha512_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `psa_hmac_abort_internal':
+psa_crypto_mac.c:(.text+0x100): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `psa_hmac_setup_internal':
+psa_crypto_mac.c:(.text+0x698): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `psa_hmac_finish_internal':
+psa_crypto_mac.c:(.text+0xa10): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `cmac_setup':
+psa_crypto_mac.c:(.text+0xb1c): undefined reference to `iotex_cipher_setup'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_mac.c:(.text+0xb50): undefined reference to `iotex_cipher_cmac_starts'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `mac_init':
+psa_crypto_mac.c:(.text+0xbd0): undefined reference to `iotex_cipher_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `iotex_psa_mac_abort':
+psa_crypto_mac.c:(.text+0xc9c): undefined reference to `iotex_cipher_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `iotex_psa_mac_update':
+psa_crypto_mac.c:(.text+0xf04): undefined reference to `iotex_cipher_cmac_update'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `psa_mac_finish_internal':
+psa_crypto_mac.c:(.text+0xfb4): undefined reference to `iotex_cipher_cmac_finish'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_mac.c:(.text+0xfe8): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_mac.c.obj): in function `iotex_psa_mac_verify_finish':
+psa_crypto_mac.c:(.text+0x1180): undefined reference to `iotex_platform_zeroize'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_pk_rsa':
+psa_crypto_rsa.c:(.text+0x1c): undefined reference to `iotex_pk_get_type'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `psa_check_rsa_key_byte_aligned':
+psa_crypto_rsa.c:(.text+0x60): undefined reference to `iotex_mpi_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x84): undefined reference to `iotex_rsa_export'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xac): undefined reference to `iotex_mpi_bitlen'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xd0): undefined reference to `iotex_mpi_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_rsa_load_representation':
+psa_crypto_rsa.c:(.text+0x110): undefined reference to `iotex_pk_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x150): undefined reference to `iotex_pk_parse_key'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x178): undefined reference to `iotex_pk_parse_public_key'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x1a0): undefined reference to `iotex_pk_get_type'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x1d0): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x258): undefined reference to `iotex_pk_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x270): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_rsa_import_key':
+psa_crypto_rsa.c:(.text+0x2cc): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x328): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_rsa_export_key':
+psa_crypto_rsa.c:(.text+0x384): undefined reference to `iotex_pk_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x3b8): undefined reference to `iotex_pk_write_key_der'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x3d4): undefined reference to `iotex_pk_write_pubkey'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x4e0): undefined reference to `iotex_rsa_info'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_rsa_export_public_key':
+psa_crypto_rsa.c:(.text+0x568): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_rsa_generate_key':
+psa_crypto_rsa.c:(.text+0x6c4): undefined reference to `iotex_rsa_init'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x6f0): undefined reference to `iotex_rsa_gen_key'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x740): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x758): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `psa_rsa_decode_md_type':
+psa_crypto_rsa.c:(.text+0x830): undefined reference to `iotex_md_get_type'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x86c): undefined reference to `iotex_md_get_size'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_rsa_sign_hash':
+psa_crypto_rsa.c:(.text+0x948): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x98c): undefined reference to `iotex_rsa_set_padding'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x9d4): undefined reference to `iotex_rsa_pkcs1_sign'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xa18): undefined reference to `iotex_rsa_set_padding'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xa58): undefined reference to `iotex_rsa_rsassa_pss_sign'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xa84): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xab0): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xad8): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `rsa_pss_expected_salt_len':
+psa_crypto_rsa.c:(.text+0xb20): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_rsa_verify_hash':
+psa_crypto_rsa.c:(.text+0xc14): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xc58): undefined reference to `iotex_rsa_set_padding'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xc84): undefined reference to `iotex_rsa_pkcs1_verify'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xcc8): undefined reference to `iotex_rsa_set_padding'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xd1c): undefined reference to `iotex_rsa_rsassa_pss_verify_ext'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xd70): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `psa_rsa_oaep_set_padding_mode':
+psa_crypto_rsa.c:(.text+0xdf0): undefined reference to `iotex_md_get_type'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xe0c): undefined reference to `iotex_rsa_set_padding'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_asymmetric_encrypt':
+psa_crypto_rsa.c:(.text+0xe9c): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xef0): undefined reference to `iotex_rsa_pkcs1_encrypt'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xf7c): undefined reference to `iotex_rsa_rsaes_oaep_encrypt'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xfc0): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0xfd8): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x1010): undefined reference to `iotex_hmac_drbg_random'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: layer/libiotex_psa_layer.a(psa_crypto_rsa.c.obj): in function `iotex_psa_asymmetric_decrypt':
+psa_crypto_rsa.c:(.text+0x1098): undefined reference to `iotex_rsa_get_len'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x10f4): undefined reference to `iotex_rsa_pkcs1_decrypt'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x1188): undefined reference to `iotex_rsa_rsaes_oaep_decrypt'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x11c0): undefined reference to `iotex_rsa_free'
+/opt/nordic/ncs/toolchains/v2.0.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/10.3.0/../../../../arm-zephyr-eabi/bin/ld.bfd: psa_crypto_rsa.c:(.text+0x11f8): undefined reference to `iotex_hmac_drbg_random'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+FATAL ERROR: command exited with status 1: /opt/nordic/ncs/toolchains/v2.0.0/bin/cmake --build /w3bstream-iot-sdk-no-docker/hello_world/build_thingy91_ns
