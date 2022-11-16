@@ -23,4 +23,4 @@ The app builds correctly
 
 ## Actual behaviour
 
-The app fails to build, you can see the log that I was getting in `buiild-out.log`  
+The app fails to build, you can see the log that I was getting in `build-out.log`  
