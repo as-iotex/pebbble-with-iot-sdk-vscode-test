@@ -15,3 +15,12 @@ add_subdirectory(
 # target_include_directories(app PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../w3bstream-iot-sdk/component/layer/include)
 target_include_directories(app PRIVATE layer/include)
 target_link_libraries(app PRIVATE iotex_psa_layer)
+
+add_compile_options(
+        -Os
+        -mthumb
+        -march=armv8-m.main
+        -mcpu=cortex-m33
+        -mfloat-abi=hard
+        -mfpu=fpv5-sp-d16
+)
